@@ -1,0 +1,149 @@
+:root {
+  --main-bg-color: #75ffd8;
+  --alt-bg-color: #3b7880;
+  --button-bg-color: #75d3ff;
+  --button-text-color: #75fff3;
+  --timer-bg-color: #a8ffff;
+  --timer-border-color: #75efff;
+  --alt-text-color: #4e9faa;
+}
+
+body {
+  background-color: var(--alt-bg-color);
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+}
+
+.control {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  width: 75px;
+  height: 75px;
+  border-radius: 15px;
+  border-color: #75b8ff;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.control-container {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.app-container {
+  border: 15px solid var(--button-bg-color);
+  padding: auto;
+  border-radius: 5px;
+  min-width: 750px;
+  min-height: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg-color);
+  margin: 100px 0 50px 0;
+}
+
+.alter-container {
+  border: 5px solid var(--button-bg-color);
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.alter {
+  display: flex;
+  flex-direction: row;
+  border: 5px solid var(--button-bg-color);
+  margin: 35px;
+  border-radius: 5px;
+}
+
+.timer-container {
+  min-width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  border-radius: 50%;
+  border: 15px solid var(--timer-border-color);
+  background-color: var(--timer-bg-color);
+  color: var(--alt-text-color);
+  font-size: 25px;
+  position: relative;
+}
+
+.timer-label {
+  margin: 0;
+}
+
+.time-left {
+  font-size: 35px;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+.alter-buttons {
+  margin: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 35px;
+  color: var(--alt-text-color);
+}
+
+.alter-buttons:active {
+  transform: translateY(4px)
+}
+
+.time-length {
+  font-size: 35px;
+  width: 50px;
+  color: var(--alt-text-color);
+  background-color: var(--button-bg-color);
+  border-radius: 5px;
+}
+
+.length-label {
+  font-size: 28px;
+  color: var(--alt-text-color);
+}
+
+/* for phone */
+
+@media only screen and (max-width: 450px) {
+  .app-container {
+    transform: scale(0.73);
+    margin-left: 190px;
+    margin-top: 200px
+  }
+  .alter-container {
+    margin: 15px;
+  }
+  .alter-buttons {
+    font-size: 55px;
+  }
+  .control {
+    transform: scale(1.4);
+    margin: 5px 0 25px 0;
+  }
+  .length-label {
+    font-size: 35px;
+  }
+  .time-length {
+    transform: scale(1.5);
+    margin: auto 8px
+  }
+}
